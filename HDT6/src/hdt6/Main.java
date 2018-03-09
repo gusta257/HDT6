@@ -17,6 +17,8 @@ public class Main {
     private static MapFactory mFactory = new MapFactory();
     private static boolean ciclo = true;
     private static String nombre;
+    private static String nombre1;
+    private static ArrayList<Carta> deckN;
     
     
 
@@ -57,12 +59,12 @@ public class Main {
             while(ciclo == true){
                 System.out.println("Escriba el numero que quiere hacer");
                 System.out.println("0. Salir");
-                System.out.println("1. Agregar");
+                System.out.println("1. Agregar //no funciona ");
                 System.out.println("2. Buscar carta por nombre");
-                System.out.println("3. Mostrar el nombre, tipo y cantidad de cada carta");
-                System.out.println("4. Mostrar el nombre, tipo y cantidad de cada carta, ordenadas por tipo");
+                System.out.println("3. Mostrar el nombre, tipo y cantidad de cada carta  //no funciona ");
+                System.out.println("4. Mostrar el nombre, tipo y cantidad de cada carta, ordenadas por tipo  //no funciona ");
                 System.out.println("5. Mostrar el nombre y tipo de todas las cartas");
-                System.out.println("6. Mostrar el nombre y tipo de todas las cartas, ordenadas por tipo.");
+                System.out.println("6. Mostrar el nombre y tipo de todas las cartas, ordenadas por tipo.  //no funciona");
                 String opt = teclado.nextLine();
 
                 switch(opt){ 
@@ -72,16 +74,22 @@ public class Main {
                     }
                     case "1":{
                         
-                        /*System.out.print("Ingrese el nombre de la carta que quiere agregar ");
-                        String nombreCarta = teclado.nextLine();
-                        yugi.agregarCarta(nombreCarta, cartas, deck, cantidadDeck, tipoNombreDeck);
-                        System.out.println("*****************************");
-*/
+                        System.out.println("Ingrese el nombre de la carta que quiere agregar ");
+                        nombre1 = teclado.nextLine();
+                        nombre1 = teclado.nextLine();
+                        Carta res = mazo.obtenerCarta(nombre1, deck);
+                        if (res!=null){
+                            deckN.add(res);
+                            System.out.println("Carta agregada exitosamente.");
+                        } else {
+                            System.out.println("Esta carta no existe.");
+
+                           }
 
                         break;
                     }
                     case "2":{
-                        System.out.println("Ingrese el nombre de la carta que desea buscar:");
+                        System.out.println("Ingrese el nombre de la carta que desea buscar");
                         nombre = teclado.nextLine();
                         nombre = teclado.nextLine();
                         String tapu  = mazo.buscar(nombre, deck);
@@ -92,6 +100,12 @@ public class Main {
                         break;
                     }
                     case "4":{
+                      
+                    
+                        break;
+                    }
+                    case "5":{
+                        mazo.mostarTodas(deck);
                       
                     
                         break;
