@@ -25,7 +25,7 @@ public class Deck {
         if(mapa.containsKey(nombre)){
             Carta c = mapa.get(nombre);
             
-            carta = "La carta " + c.getNombre() + " es tipo" + c.getTipo() ;
+            carta = "La carta " + c.getNombre() + " es tipo"+ c.getTipo()  ;
         }else{ 
             carta = "Esta carta no existe";
         }

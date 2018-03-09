@@ -17,17 +17,17 @@ public class MapFactory{
     if (entry.equalsIgnoreCase("HashMap")){
        System.out.println("-------------------------------------------------------------------------------------");
        System.out.println("Usted escogio HashMap");
-        return new HashMap<String, Carta> ();
+        return new HashMap<> ();
     }//regresa HashMap
     if (entry.equalsIgnoreCase("TreeMap")){
        System.out.println("-------------------------------------------------------------------------------------");
        System.out.println("Usted escogio TreeMap");
-        return new TreeMap<String, Carta>();
+        return new TreeMap<>();
     }//regresa TreeMap
     if (entry.equalsIgnoreCase("LinkedHashMap")){
        System.out.println("-------------------------------------------------------------------------------------");
        System.out.println("Usted escogio LinkedHashMap");
-        return new LinkedHashMap<String, Carta>();
+        return new LinkedHashMap<>();
     }//regresa LinkedHashMap
     else{
         System.out.println("Usted escrbio mal xd");
