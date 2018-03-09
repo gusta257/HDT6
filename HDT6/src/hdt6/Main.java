@@ -35,12 +35,13 @@ public class Main {
         try {
             String sCadena;
             //Funcion para abrir y leer el documento 
-            FileReader fr = new FileReader("datos.txt");
+            FileReader fr = new FileReader("cards_desc.txt");
             BufferedReader bf = new BufferedReader(fr);
             //bucle para hacer las funciones dependiendo de las lineas del documento
-            while ((sCadena = bf.readLine())!=null) {       
+            while ((sCadena = bf.readLine())!=null) { 
+                String[] separar = sCadena.split("|");
                 contador=contador+1;
-                System.out.println(contador+(")Su resultado es: ")+calc.calcular(sCadena,rpt));
+                //System.out.println(contador+(")Su resultado es: ")+calc.calcular(sCadena,rpt));
             } 
         //Sirve si algun dato del documento no sirva
         }catch(Exception e){

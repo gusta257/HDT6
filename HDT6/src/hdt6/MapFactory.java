@@ -11,24 +11,24 @@ import java.util.*;
  *
  * @author Gustavo
  */
-public class MapFactory<E> {
+public class MapFactory<K, V> {
     public static Map getMap(String entry) {
     // seleccion de la implementacion a utilizar:
     if (entry.equalsIgnoreCase("HashMap")){
        System.out.println("-------------------------------------------------------------------------------------");
        System.out.println("Usted escogio HashMap");
         return new HashMap();
-    }//regresa ArrayList
+    }//regresa HashMap
     if (entry.equalsIgnoreCase("TreeMap")){
        System.out.println("-------------------------------------------------------------------------------------");
        System.out.println("Usted escogio TreeMap");
         return new TreeMap();
-    }//regresa ArrayList
+    }//regresa TreeMap
     if (entry.equalsIgnoreCase("LinkedHashMap")){
        System.out.println("-------------------------------------------------------------------------------------");
        System.out.println("Usted escogio LinkedHashMap");
         return new LinkedHashMap();
-    }//regresa ArrayList
+    }//regresa LinkedHashMap
     else{
         System.out.println("Usted escrbio mal xd");
     }
