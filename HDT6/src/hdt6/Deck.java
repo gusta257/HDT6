@@ -12,13 +12,26 @@ import java.util.*;
  * @author Gustavo
  */
 public class Deck {
-    MapFactory mFactory = new MapFactory();
+    private MapFactory mFactory = new MapFactory();
     
    
-    public void agregar(String nombre, String rpt) {
-        Map<String, Integer> mapa = mFactory.getMap(rpt);
-        m
-
+    /*public void agregar(String nombre, Map ) {
+        
+        
+    }*/
+    
+    public String buscar(String nombre, Map<String, Carta> mapa ){
+        String carta = "";
+        if(mapa.containsKey(nombre)){
+            Carta c = mapa.get(nombre);
+            
+            carta = "La carta " + c.getNombre() + " es tipo" + c.getTipo() ;
+        }else{ 
+            carta = "Esta carta no existe";
+        }
+        
+        return carta;
+        
         
     }
     
