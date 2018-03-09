@@ -25,11 +25,13 @@ public class Main {
         //Calculadora calc = new Calculadora();
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingrese el nombre del MAP que desea usar:");
-          System.out.println("HashMap");
-          System.out.println("TreeMap");
-          System.out.println("LinkedHashMap");
-          System.out.println("-------------------------------------------------------------------------------------");
-          String rpt = teclado.nextLine();
+        System.out.println("HashMap");
+        System.out.println("TreeMap");
+        System.out.println("LinkedHashMap");
+        System.out.println("-------------------------------------------------------------------------------------");
+        String rpt = teclado.nextLine();
+        MapFactory mFactory = new MapFactory();
+
         
         int contador=0;
         try {
@@ -40,7 +42,10 @@ public class Main {
             //bucle para hacer las funciones dependiendo de las lineas del documento
             while ((sCadena = bf.readLine())!=null) { 
                 String[] separar = sCadena.split("|");
-                contador=contador+1;
+                String nombre = separar[0]; 
+                String tipo = separar[1]; 
+                
+                
                 //System.out.println(contador+(")Su resultado es: ")+calc.calcular(sCadena,rpt));
             } 
         //Sirve si algun dato del documento no sirva
